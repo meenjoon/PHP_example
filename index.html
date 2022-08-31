@@ -1,0 +1,11 @@
+try
+{
+    throw new Exception("예외 메시지"); // 예외 객체 던짐.
+}
+catch(Exception $ex)                    // 예외 처리
+{
+    echo $ex->getMessage()."<br>";
+    echo "예외가 발생한 파일 경로 : ".$ex->getFile()."<br>";
+
+    echo "예외가 발생한 라인 번호 : ".$ex->getLine();
+}
